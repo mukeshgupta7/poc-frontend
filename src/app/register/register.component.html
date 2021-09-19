@@ -1,0 +1,52 @@
+<div class="py-5">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+          <span class="anchor" id="formLogin"></span>
+    
+          <div class="card rounded-0">
+            <div class="card-header">
+              <h3 class="mb-0">Register</h3>
+            </div>
+            <div class="card-body">
+              <form #myForm="ngForm" (keydown)="EnterSubmit($event, myForm.form)">
+
+                <div class=formGroup> 
+                  <label for="uname1">Username</label>
+                  <input type="text" #nameHndle="ngModel" [(ngModel)]="name" [class.is-invalid]="nameHndle.invalid && nameHndle.touched" 
+                  pattern="^.{4,}$" name="username" class="form-control rounded-0" required>
+                  <small class="text-danger" [class.d-none]="nameHndle.valid || nameHndle.untouched">Username length must be atleast 4</small>
+                </div>
+
+                <div class="form-group">
+                  <label>Password</label>
+                  <input type="password" #pwdHandle="ngModel" [(ngModel)]="password" [class.is-invalid]="pwdHandle.invalid && pwdHandle.touched" 
+                  pattern="^.{4,}$" name="password" class="form-control rounded-0" required>
+                  <small class="text-danger" [class.d-none]="pwdHandle.valid || pwdHandle.untouched">Password must be atleast 4 char long.</small>
+                </div>
+                <!-- <div class="form-group">
+                    <label>Usertype</label>
+                    <input type="text" [(ngModel)]="type" name="type" class="form-control rounded-0"  required>
+                </div> -->
+                <div class="form-group">
+                  <!-- <select class="form-select" aria-label="Default select example">
+                    <option >User Type</option>
+                    <option [(ngModel)]="user">User</option>
+                    <option [(ngModel)]="admin">Admin</option>
+                  </select> -->
+                  <label for="power">User Type</label>
+                  <select class="form-control" #typeHandle="ngModel" [(ngModel)]="type" name="type" [class.is-invalid]="typeHandle.invalid && typeHandle.touched"
+                  required>
+                    <option value="">Select</option>
+                    <option value="user" aria-selected="true">User</option>
+                    <option value="admin" >Admin</option>
+                  </select>
+                  <small class="text-danger" [class.d-none]="typeHandle.valid || typeHandle.untouched">Type is required.</small>
+               </div>
+                <button [disabled]="myForm.form.invalid" type="button" (click)="registerUser(); myForm.reset()" class="btn btn-primary float-right">Sign up</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+</div>

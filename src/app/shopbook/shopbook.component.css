@@ -1,0 +1,85 @@
+.badge {
+    padding-left: 9px;
+    padding-right: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+  }
+  
+  .label-warning[href],
+  .badge-warning[href] {
+    background-color: #c67605;
+  }
+
+  #lblCartCount {
+      font-size: 12px;
+      background: #ff0000;
+      color: #fff;
+      padding: 0 5px;
+      vertical-align: top;
+      margin-left: -10px; 
+  }
+
+  /* a {
+      margin-top: 0px;
+      margin-bottom: 10px;
+  } */
+
+ .nav {
+    margin-left: 310px;
+    /* margin-top: 110px; */
+    /* position:fixed; */
+    z-index: 3;
+  }
+
+ .col-md-2 {
+  /* margin-top: 100px; */
+  z-index: 3;
+ }
+
+ h1 {
+   /* position: fixed; */
+   margin-top: 0px;
+ } 
+
+.books {
+   margin-top: 0px;
+ }
+
+ /*
+ .book-desc-container {
+  margin: 0 auto;
+ }
+
+ .btnc {
+   display: inline;
+ }
+
+.col-md-4 {
+  margin-top: 10px;
+}
+
+.custom {
+  height: auto;
+  overflow-y: auto;
+  overflow-y: hidden;
+  
+}
+
+/* .offset-md-8 {
+  margin-top: 150px;
+  z-index: 1;
+ } */
+
+ /* .col-md-4 {
+   margin-top: 10px;
+ }
+
+ .col-md-10 {
+  margin-top: 150px;
+  margin-right: 0px;
+ } */
+
+ .col-md-4 {
+  margin-top: 10px;
+}

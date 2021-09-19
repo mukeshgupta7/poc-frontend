@@ -1,0 +1,40 @@
+<h1>Add User</h1>
+<div class="container">
+  <form #recievedUser="ngForm">
+
+    <div>
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" placeholder="user name" [(ngModel)]="user.name" name="name">
+    </div>
+
+    <div>
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password" placeholder="password" [(ngModel)]="user.password" name="password">
+    </div>
+  
+    <!-- <label for="type">Type</label>
+    <input type="text" class="form-control" id="type" placeholder="type name" [(ngModel)]="user.type" name="name"> -->
+  
+    
+  
+    <!-- <div class="radio">
+        <input type="radio" class="radio-inline" id="type" name="user_type" [(ngModel)]="user.type" value="USER">
+        <label for="user">User</label>
+
+        <input type="radio" class="radio-inline" id="type" name="user_type" [(ngModel)]="user.type" value="ADMIN">
+        <label for="admin">Admin</label>
+      
+    </div> -->
+
+    <div id="button-div">
+      <label><input type="radio" class="radio-inline" name="type" [(ngModel)]="user.type" value="User" checked>User</label>
+      <label><input type="radio" class="radio-inline" name="type" [(ngModel)]="user.type" value="Admin">Admin</label>
+    </div>
+
+    
+    
+  
+     <br>
+    <button type="button" class="btn btn-success" (click)="addUser()">Save</button>
+  </form>
+</div>

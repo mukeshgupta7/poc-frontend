@@ -1,0 +1,26 @@
+<h2>Items in Cart</h2>
+<div class="container row">
+    <div class="col-md-6">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let book of cartBooks">
+            <td>{{book.id}}</td>
+            <td>{{book.name}}</td>
+            <td>${{book.price}}</td>
+            <td>
+              <img class="custom-image-style" img src="{{'data:image/jpeg;base64,' + book.picByte}}" height="200" width="150" style="margin-left: 60px; margin-top: 10px">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

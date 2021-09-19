@@ -1,0 +1,21 @@
+input[type="radio"] {
+    margin-right: 4px;
+    margin-left: 13px;
+}
+
+/* label {
+    margin-left: 100px;
+} */
+
+div > div > label {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+form > div {
+    margin-top: 15px;
+}
+
+#button-div {
+    margin-right: auto;
+}

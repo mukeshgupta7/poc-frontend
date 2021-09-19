@@ -1,0 +1,26 @@
+<header>
+    <nav class="navbar navbar-expand-md">
+        <div><a href="http://localhost:4200/" class="navbar-brand">Ecommerce</a></div>
+       
+
+        <ul class="navbar-nav dropdown">
+            <li><a  class="nav-link" *ngIf="_authService.loggedIn()" routerLink="/shop"  >Shop</a></li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#"  *ngIf="_authService.loggedIn() && _authService.isAdmin()" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Admin
+                </a>
+              
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a routerLink="/admin/users" class="dropdown-item dropdown custom">Users</a>
+                    <a routerLink="/admin/books" class="dropdown-item dropdown custom">Books</a>
+                </div>
+            </li>
+        </ul>
+        <ul class="navbar-nav">
+            <a class="nav-link" *ngIf="!_authService.loggedIn()" routerLink="/login">Login</a>
+            <a class="nav-link" *ngIf="!_authService.loggedIn()" routerLink="/register">Register</a>
+            <a class="nav-link" style="cursor:pointer" *ngIf="_authService.loggedIn()" (click)="_authService.logoutUser()">Logout</a>
+        </ul>
+    </nav>
+</header>
